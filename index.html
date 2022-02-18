@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PDF viewer</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="assets/css/index.css">
+    </head>
+    <body>
+
+        <div class="pdf-content">
+            <canvas class="canva-pdf" id="pdf-render"></canvas>
+        </div>
+   
+       <div class="controlbar__content">
+           <div class="control-bar">
+                <button style="margin-right: 0.7rem;" class="btn-pdf" id="prev-page">
+                    <i class="fas fa-arrow-circle-left"></i> Prev
+                </button>
+                <button class="btn-pdf" id="next-page">
+                    Next <i class="fas fa-arrow-circle-right"></i>
+                </button>
+                <span class="page-info">
+                    Page <span id="page-num"></span> de <span id="page-count"></span>
+                </span>
+            </div>
+       </div>
+
+       <div class="btn__zoom-content">
+           <a href="#zoom_in" class="zoom_btn" id="zoom_in" onclick="zoom_in()"><i class="fas fa-search-plus"></i></a>
+           <div class="btn__zoom-divisor"></div>
+           <a href="#zoom_out" class="zoom_btn" id="zoom_out" onclick="zoom_out()"><i class="fas fa-search-minus"></i></a>
+       </div>
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+
+    </body>
+</html>
